@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <!-- Warm cream field -->
+  <rect width="1000" height="1000" fill="#E4E2D7"/>
+  <!-- Formline "F" — offset charcoal blocks -->
+  <path fill="#2B2B28" d="M272 214H728V373H452V458H272Z M452 458H695V590H452Z M272 590H452V786H272Z"/>
+</svg>
