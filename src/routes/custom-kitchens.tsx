@@ -25,7 +25,7 @@ function CustomKitchens() {
       <Header variant="solid" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-charcoal text-offwhite overflow-hidden grain-overlay">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-olive text-offwhite overflow-hidden grain-overlay">
         <div className="absolute inset-0 z-0 opacity-40">
           <img src={heroKitchen} alt="Custom Kitchen Hero" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-charcoal/80" />
@@ -34,8 +34,8 @@ function CustomKitchens() {
         <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">
           <Reveal>
             <div className="flex items-center gap-2 mb-8">
-              <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-              <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest uppercase">Our Services</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+              <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest uppercase">Our Services</span>
             </div>
           </Reveal>
           
@@ -44,7 +44,7 @@ function CustomKitchens() {
               <Reveal delay={0.1}>
                 <h1 className="text-display text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-tight mb-8">
                   Custom kitchens, made for the way you{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">live</span>.
+                  <span className="text-cream">live</span>.
                 </h1>
               </Reveal>
             </div>
@@ -56,7 +56,7 @@ function CustomKitchens() {
                 <p className="text-offwhite/70 text-sm md:text-base leading-relaxed mb-8 max-w-sm">
                   Every kitchen is crafted in our Campbellfield workshop using premium materials and 25 years of joinery expertise.
                 </p>
-                <Link to="/contact" className="magnetic-btn px-8 py-4 inline-flex items-center gap-3">
+                <Link to="/contact" className="magnetic-btn bg-offwhite text-charcoal px-8 py-4 inline-flex items-center gap-3">
                   <span>Book a Free Consultation</span>
                   <span className="btn-arrow">→</span>
                 </Link>
@@ -67,7 +67,7 @@ function CustomKitchens() {
       </section>
 
       {/* Feature Badges */}
-      <section className="bg-charcoal border-t border-white/10 text-offwhite py-8">
+      <section className="bg-olive border-t border-white/10 text-offwhite py-8">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -77,9 +77,9 @@ function CustomKitchens() {
               "Expert installation"
             ].map((badge, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="flex items-center justify-center text-center gap-3 border border-white/10 py-6 px-4 hover:bg-white/5 transition-colors">
-                  <span className="text-terracotta">✦</span>
-                  <span className="text-xs uppercase tracking-widest font-bold">{badge}</span>
+                <div className="flex flex-col sm:flex-row items-center justify-center text-center gap-2 sm:gap-3 border border-white/10 py-6 px-2 sm:px-4 hover:bg-white/5 transition-colors">
+                  <span className="text-offwhite">✦</span>
+                  <span className="text-xs uppercase tracking-wider sm:tracking-widest font-bold">{badge}</span>
                 </div>
               </Reveal>
             ))}
@@ -97,7 +97,7 @@ function CustomKitchens() {
               <Reveal delay={0.1}>
                 <h2 className="text-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-8">
                   Bespoke kitchens, designed around{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">you</span>.
+                  <span className="text-brass">you</span>.
                 </h2>
               </Reveal>
               
@@ -110,7 +110,7 @@ function CustomKitchens() {
 
             {/* Image Block */}
             <Reveal>
-              <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-charcoal relative overflow-hidden border border-charcoal/10 group">
+              <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-olive relative overflow-hidden border border-charcoal/10 group">
                 <img src={projectWalnut} alt="Custom Kitchen Detail" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out" />
               </div>
             </Reveal>
@@ -147,11 +147,11 @@ function CustomKitchens() {
       </section>
 
       {/* Craftsmanship Section */}
-      <section className="py-24 md:py-36 bg-charcoal text-offwhite grain-overlay">
+      <section className="py-24 md:py-36 bg-olive text-offwhite grain-overlay">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10 text-center">
           <Reveal>
             <h2 className="text-display text-4xl md:text-6xl leading-tight mb-8">
-              Crafted to last, finished to <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">impress</span>
+              Crafted to last, finished to <span className="text-cream">impress</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>

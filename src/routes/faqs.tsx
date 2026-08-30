@@ -61,10 +61,10 @@ function FAQs() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-display text-[3.5rem] sm:text-6xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight break-words hyphens-auto">
+            <h1 className="text-display text-[2.6rem] sm:text-6xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight break-words hyphens-auto">
               Your questions,{" "}
               <br />
-              <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+              <span className="text-brass">
                 answered
               </span>
               .
@@ -101,7 +101,7 @@ function FAQs() {
                     </div>
                     <div>
                       <div className="text-eyebrow text-charcoal/40 text-[0.62rem] mb-1">Direct Enquiries</div>
-                      <div className="text-sm font-medium">admin@formlinejoinery.com.au</div>
+                      <div className="text-sm font-medium break-all">admin@formlinejoinery.com.au</div>
                     </div>
                   </div>
 

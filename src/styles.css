@@ -7,42 +7,65 @@
 
 /* ============================================================
    FORMLINE JOINERY — Design System
-   Brand palette (exact hex from brand guide):
+   Brand palette (exact hex from the 2026 brand guide):
    cream #E4E2D7  charcoal #2B2B28  olive #6C7454
    stone #A89F8C  brass #8C7355     terracotta #A24A3C
    off-white #F7F6F2
+
+   COLOUR ROLES — deliberate divergence from the guide.
+   The guide lists Charcoal as primary and Dusty Olive as secondary.
+   This site inverts that on purpose: Dusty Olive is the dominant
+   surface colour. The split is by JOB, not by colour:
+
+     olive     — dark section fills, the main colour you see
+     charcoal  — text ink, borders, and scrims over photography
+     terracotta— accent only (dots, rules, hover, CTA hover fill)
+
+   Charcoal stays the ink because olive cannot survive being faded:
+   text-charcoal/50 on off-white is 3.36:1, olive/50 is 2.18:1, and
+   there are 116 faded-text uses across the site. Scrims stay charcoal
+   so photography is not tinted green and keeps its contrast.
    ============================================================ */
 
 :root {
-  /* raw brand tokens */
-  --cream: oklch(0.905 0.011 95);
-  --charcoal: oklch(0.235 0.005 60);
-  --olive: oklch(0.485 0.038 118);
-  --stone: oklch(0.685 0.018 82);
-  --brass: oklch(0.545 0.045 68);
-  --terracotta: oklch(0.520 0.128 33);
-  --off-white: oklch(0.972 0.005 95);
+  /* ---- raw brand tokens ----
+     oklch values below are exact conversions of the brand-guide hex.
+     Do not hand-tune: any drift breaks colour match with print/logo assets. */
 
-  /* semantic — light (default: off-white base, charcoal ink) */
+  /* PRIMARY — the foundation of the identity */
+  --cream: oklch(0.9113 0.0149 98.30);      /* Warm Cream  #E4E2D7 */
+  --charcoal: oklch(0.2880 0.0054 106.73);  /* Charcoal    #2B2B28 */
+
+  /* SECONDARY — incorporated when necessary */
+  --brass: oklch(0.5718 0.0534 71.53);      /* Aged Brass  #8C7355 */
+  --stone: oklch(0.7049 0.0288 85.67);      /* Warm Stone  #A89F8C */
+  --olive: oklch(0.5433 0.0485 119.44);     /* Dusty Olive #6C7454 */
+  --terracotta: oklch(0.5188 0.1199 30.81); /* Terracotta  #A24A3C */
+  --off-white: oklch(0.9728 0.0054 95.10);  /* Off White   #F7F6F2 */
+
+  /* semantic — light
+     Cream + charcoal (primary) carry the surfaces and the ink.
+     Off-white is the page ground — the guide sanctions it for backgrounds.
+     Every value below resolves to a brand token; no free-floating colours. */
   --radius: 0rem;
   --background: var(--off-white);
   --foreground: var(--charcoal);
-  --card: var(--off-white);
+  --card: var(--cream);
   --card-foreground: var(--charcoal);
-  --popover: var(--off-white);
+  --popover: var(--cream);
   --popover-foreground: var(--charcoal);
   --primary: var(--charcoal);
   --primary-foreground: var(--off-white);
   --secondary: var(--cream);
   --secondary-foreground: var(--charcoal);
   --muted: var(--cream);
-  --muted-foreground: oklch(0.42 0.012 60);
+  --muted-foreground: color-mix(in oklab, var(--charcoal) 62%, var(--stone));
   --accent: var(--terracotta);
   --accent-foreground: var(--off-white);
   --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: var(--off-white);
-  --border: oklch(0.86 0.008 82);
-  --input: oklch(0.86 0.008 82);
+  --border: color-mix(in oklab, var(--stone) 45%, var(--cream));
+  --input: color-mix(in oklab, var(--stone) 45%, var(--cream));
   --ring: var(--brass);
   --chart-1: var(--olive);
   --chart-2: var(--brass);
@@ -55,7 +78,7 @@
   --sidebar-primary-foreground: var(--off-white);
   --sidebar-accent: var(--stone);
   --sidebar-accent-foreground: var(--charcoal);
-  --sidebar-border: oklch(0.86 0.008 82);
+  --sidebar-border: color-mix(in oklab, var(--stone) 45%, var(--cream));
   --sidebar-ring: var(--brass);
 
   /* editorial tokens */
@@ -63,23 +86,26 @@
   --font-body: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
+  --tracking-eyebrow: 0.28em;
   --grain-opacity: 0.045;
   --shadow-soft: 0 40px 80px -30px color-mix(in oklab, var(--charcoal) 35%, transparent);
 }
 
 .dark {
+  /* Raised surfaces are charcoal lifted toward cream, so the dark theme
+     stays inside the primary pair instead of drifting to a neutral grey. */
   --background: var(--charcoal);
   --foreground: var(--off-white);
-  --card: oklch(0.28 0.005 60);
+  --card: color-mix(in oklab, var(--charcoal) 94%, var(--cream));
   --card-foreground: var(--off-white);
-  --popover: oklch(0.28 0.005 60);
+  --popover: color-mix(in oklab, var(--charcoal) 94%, var(--cream));
   --popover-foreground: var(--off-white);
   --primary: var(--off-white);
   --primary-foreground: var(--charcoal);
-  --secondary: oklch(0.32 0.006 60);
+  --secondary: color-mix(in oklab, var(--charcoal) 88%, var(--cream));
   --secondary-foreground: var(--off-white);
-  --muted: oklch(0.32 0.006 60);
-  --muted-foreground: oklch(0.72 0.01 82);
+  --muted: color-mix(in oklab, var(--charcoal) 88%, var(--cream));
+  --muted-foreground: var(--stone);
   --accent: var(--terracotta);
   --accent-foreground: var(--off-white);
   --border: oklch(1 0 0 / 12%);
@@ -159,8 +185,11 @@
     font-family: var(--font-body);
     font-feature-settings: "ss01", "cv11";
     letter-spacing: -0.005em;
+    /* break-word only when a word genuinely cannot fit its container.
+       NOT `word-break: break-word` — that behaves like `anywhere`, which
+       shrinks flex/grid min-content and splits words mid-syllable even
+       when they would wrap cleanly (e.g. "Campbellf/ield"). */
     overflow-wrap: break-word;
-    word-break: break-word;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
@@ -174,6 +203,15 @@
   }
 }
 
+/* Small-phone typography guard: wide tracking is the main cause of forced
+   mid-word breaks at 320–420px. Must stay OUTSIDE @layer base — layered
+   rules lose to the unlayered :root above, so the override would never win. */
+@media (max-width: 420px) {
+  :root {
+    --tracking-eyebrow: 0.12em;
+  }
+}
+
 /* ---- editorial utilities ---- */
 @utility text-display {
   font-family: var(--font-display);
@@ -183,11 +221,14 @@
   text-transform: uppercase;
 }
 
+/* Eyebrow tracking is very wide by design, but 0.28em pushes long strings
+   (emails, "Instagram", "Subscribe") out of narrow columns on small phones.
+   Tighten it below 420px so the look survives without forcing breaks. */
 @utility text-eyebrow {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.72rem;
-  letter-spacing: 0.28em;
+  letter-spacing: var(--tracking-eyebrow, 0.28em);
   text-transform: uppercase;
 }
 
@@ -226,9 +267,13 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   overflow: hidden;
-  background-color: var(--terracotta);
+  /* Dusty Olive carries the CTA, matching the site's dominant surface colour.
+     Hover fills charcoal — terracotta is NOT used here: at 1.19:1 against
+     olive the hover would be almost invisible, whereas charcoal reads clearly
+     and keeps the off-white label at 13:1. */
+  background-color: var(--olive);
   color: var(--off-white);
-  border: 1px solid var(--terracotta);
+  border: 1px solid var(--olive);
   transition: border-color 400ms ease, transform 400ms cubic-bezier(0.2, 0.9, 0.2, 1), color 400ms ease;
   cursor: pointer;
   z-index: 1;
@@ -244,7 +289,7 @@
   }
 
   &:hover {
-    border-color: var(--off-white);
+    border-color: var(--charcoal);
     color: var(--off-white);
     transform: translateY(-2px);
     &::before {
@@ -275,7 +320,7 @@
   overflow: hidden;
   background-color: transparent;
   color: var(--off-white);
-  border: 1px solid rgba(247, 246, 242, 0.35);
+  border: 1px solid color-mix(in oklab, var(--off-white) 35%, transparent);
   transition: color 400ms ease, border-color 400ms ease, transform 400ms cubic-bezier(0.2, 0.9, 0.2, 1);
   cursor: pointer;
   z-index: 1;

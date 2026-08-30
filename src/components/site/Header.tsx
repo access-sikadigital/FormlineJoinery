@@ -80,12 +80,12 @@ export function Header({ variant = "overlay" }: { variant?: "overlay" | "solid" 
                       {item.label}
                     </span>
                     <div className="absolute top-full left-0 pt-6 hidden group-hover:block w-64 opacity-0 group-hover:opacity-100 group-hover:animate-fade-up">
-                      <div className="bg-charcoal text-offwhite border border-offwhite/10 p-5 flex flex-col gap-4 shadow-xl">
+                      <div className="bg-olive text-offwhite border border-offwhite/10 p-5 flex flex-col gap-4 shadow-xl">
                         {item.children.map((child) => (
                           <Link
                             key={child.to}
                             to={child.to}
-                            className="text-sm font-medium hover:text-terracotta transition-colors"
+                            className="text-sm font-medium hover:text-offwhite transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -133,7 +133,7 @@ export function Header({ variant = "overlay" }: { variant?: "overlay" | "solid" 
 
       {/* Mobile / fullscreen menu */}
       <div
-        className={`fixed inset-0 z-[60] bg-charcoal text-offwhite transition-all duration-700 h-[100dvh] ${
+        className={`fixed inset-0 z-[60] bg-olive text-offwhite transition-all duration-700 h-[100dvh] ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -227,7 +227,7 @@ export function Header({ variant = "overlay" }: { variant?: "overlay" | "solid" 
               <div className="text-offwhite/40 mb-1.5 font-semibold">Studio</div>
               37 Adrian Road,<br/>Campbellfield
             </div>
-            <div>
+            <div className="break-all">
               <div className="text-offwhite/40 mb-1.5 font-semibold">Enquiries</div>
               admin@formlinejoinery.com.au
             </div>

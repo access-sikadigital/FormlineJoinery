@@ -68,7 +68,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] w-full overflow-hidden bg-charcoal text-offwhite grain-overlay flex flex-col justify-between pt-28 pb-12 md:pt-36 md:pb-16">
+    <section ref={ref} className="relative min-h-[100svh] w-full overflow-hidden bg-olive text-offwhite grain-overlay flex flex-col justify-between pt-28 pb-12 md:pt-36 md:pb-16">
       {/* Background Video & Parallax Overlay */}
       <motion.div style={{ scale, y }} className="absolute inset-0">
         <video
@@ -105,13 +105,13 @@ function Hero() {
       {/* Top Meta Bar */}
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="h-2 w-2 bg-terracotta animate-pulse" />
+          <span className="h-2 w-2 bg-offwhite animate-pulse" />
           <span className="text-eyebrow text-offwhite/80">Est. 1999 · Melbourne, Australia</span>
         </div>
 
         <div className="hidden md:flex items-center gap-3 text-right">
           <span className="text-eyebrow text-offwhite/50">Featured Residence</span>
-          <span className="text-eyebrow text-terracotta">01 / 09</span>
+          <span className="text-eyebrow text-offwhite">01 / 09</span>
           <span className="text-eyebrow text-offwhite/80">· Hawthorn Kitchen</span>
         </div>
       </div>
@@ -122,12 +122,12 @@ function Hero() {
         className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 my-auto py-8"
       >
         <div className="max-w-6xl">
-          <h1 className="text-display text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.92]">
+          <h1 className="text-display text-3xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.92]">
             <span className="block reveal-mask">
               <span>Where craftsmanship</span>
             </span>
             <span className="block reveal-mask" style={{ animationDelay: "100ms" }}>
-              <span className="text-serif-italic normal-case font-normal text-stone mr-3">
+              <span className="text-cream mr-3">
                 meets
               </span>
               <span>refinement.</span>
@@ -135,7 +135,7 @@ function Hero() {
           </h1>
 
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-8 border-t border-offwhite/15">
-            <div className="lg:col-span-7 border-l-2 border-terracotta pl-6 py-1">
+            <div className="lg:col-span-7 border-l-2 border-offwhite/40 pl-6 py-1">
               <p
                 className="text-offwhite/90 text-base sm:text-lg md:text-xl font-light leading-relaxed tracking-wide animate-fade-up"
                 style={{ animationDelay: "400ms" }}
@@ -148,7 +148,7 @@ function Hero() {
             <div className="lg:col-span-6 flex flex-wrap items-center gap-4  animate-fade-up" style={{ animationDelay: "600ms" }}>
               <Link
                 to="/contact"
-                className="magnetic-btn px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase rounded-none"
+                className="magnetic-btn px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase rounded-none bg-offwhite text-charcoal"
               >
                 <span>Get a Free Quote</span>
                 <span className="btn-arrow text-base">→</span>
@@ -168,7 +168,7 @@ function Hero() {
       {/* Bottom Scroll Hint */}
       <div className="relative z-10 mx-auto flex flex-col items-center gap-2 text-offwhite/60">
         <span className="text-eyebrow text-[0.65rem] tracking-widest uppercase">Scroll</span>
-        <div className="h-8 w-px bg-gradient-to-b from-terracotta to-transparent animate-pulse" />
+        <div className="h-8 w-px bg-gradient-to-b from-offwhite to-transparent animate-pulse" />
       </div>
     </section>
   );
@@ -182,7 +182,7 @@ function Statement() {
         <Reveal delay={0.15}>
           <h2 className="text-display text-[11vw] sm:text-[7vw] md:text-[6.5vw] lg:text-[6.5rem] leading-[0.88] max-w-[18ch]">
             Twenty-five years of craft.{" "}
-            <span className="text-serif-italic normal-case font-normal text-stone tracking-normal">
+            <span className="text-stone">
               Made in Melbourne.
             </span>{" "}
             Built to last a lifetime.
@@ -244,14 +244,14 @@ function Services() {
   ];
 
   return (
-    <section ref={targetRef} className="relative max-md:h-auto h-[220vh] bg-charcoal text-offwhite grain-overlay">
+    <section ref={targetRef} className="relative max-md:h-auto h-[220vh] bg-olive text-offwhite grain-overlay">
       <div className="max-md:relative max-md:h-auto sticky top-0 flex h-screen flex-col justify-between max-md:gap-10 overflow-hidden py-10 md:py-10">
         {/* Section Header */}
         <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 flex items-end justify-between gap-6 shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-              <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">What We Do</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+              <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">What We Do</span>
             </div>
             <h2 className="text-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Custom-made, start to finish.
@@ -261,7 +261,7 @@ function Services() {
           <div className="hidden lg:flex items-center gap-4">
             <span className="text-eyebrow text-offwhite/50 text-[0.7rem]">Scroll to Explore</span>
             <div className="h-1.5 w-28 bg-offwhite/10 relative overflow-hidden">
-              <motion.div style={{ width: progressWidth }} className="h-full bg-terracotta" />
+              <motion.div style={{ width: progressWidth }} className="h-full bg-offwhite" />
             </div>
           </div>
         </div>
@@ -272,16 +272,16 @@ function Services() {
             {items.map((s) => (
               <div
                 key={s.n}
-                className="group relative w-full md:w-[500px] lg:w-[540px] shrink-0 bg-charcoal/50 border border-offwhite/12 hover:border-terracotta/70 transition-colors duration-500 overflow-hidden flex flex-col justify-between p-5 md:p-6"
+                className="group relative w-full md:w-[500px] lg:w-[540px] shrink-0 bg-charcoal/50 border border-offwhite/12 hover:border-offwhite/70 transition-colors duration-500 overflow-hidden flex flex-col justify-between p-5 md:p-6"
               >
                 {/* Top Card Info & Badge */}
                 <div className="flex items-center justify-between gap-3 mb-4 z-10">
                   <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="text-display text-lg sm:text-xl text-terracotta font-bold leading-none shrink-0">{s.n}</span>
+                    <span className="text-display text-lg sm:text-xl text-offwhite font-bold leading-none shrink-0">{s.n}</span>
                     <span className="h-3 w-px bg-offwhite/20 shrink-0" />
                     <span className="text-eyebrow text-offwhite/60 text-[0.65rem] truncate">{s.tag}</span>
                   </div>
-                  <span className="hidden sm:block text-eyebrow text-offwhite/40 text-[0.65rem] group-hover:text-terracotta transition-colors shrink-0 whitespace-nowrap">
+                  <span className="hidden sm:block text-eyebrow text-offwhite/40 text-[0.65rem] group-hover:text-offwhite transition-colors shrink-0 whitespace-nowrap">
                     Formline Joinery
                   </span>
                 </div>
@@ -299,15 +299,15 @@ function Services() {
                   {/* Corner Hover Badge */}
                   <div className="absolute bottom-3 right-3 bg-charcoal/85 backdrop-blur-md border border-offwhite/20 px-3 py-1.5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                     <span className="text-eyebrow text-offwhite text-[0.65rem] flex items-center gap-1.5">
-                      View Service <span className="text-terracotta">→</span>
+                      View Service <span className="text-offwhite">→</span>
                     </span>
                   </div>
                 </Link>
 
                 {/* Bottom Title & Description */}
                 <div>
-                  <div className="text-eyebrow text-stone text-[0.65rem] mb-1.5">{s.subtitle}</div>
-                  <h3 className="text-display text-xl md:text-2xl lg:text-3xl mb-2 group-hover:text-terracotta transition-colors">
+                  <div className="text-eyebrow text-offwhite text-[0.65rem] mb-1.5">{s.subtitle}</div>
+                  <h3 className="text-display text-xl md:text-2xl lg:text-3xl mb-2 group-hover:text-offwhite transition-colors">
                     {s.title}
                   </h3>
                   <p className="text-offwhite/75 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
@@ -326,7 +326,7 @@ function Services() {
             ))}
 
             {/* Card 05: Explore All Services */}
-            <div className="group relative w-full md:w-[500px] lg:w-[540px] shrink-0 bg-terracotta/90 border border-terracotta hover:bg-terracotta transition-colors duration-500 overflow-hidden flex flex-col justify-between p-5 md:p-6 text-offwhite">
+            <div className="group relative w-full md:w-[500px] lg:w-[540px] shrink-0 bg-charcoal border border-offwhite/25 hover:border-offwhite/50 transition-colors duration-500 overflow-hidden flex flex-col justify-between p-5 md:p-6 text-offwhite">
               {/* Top Card Info & Badge */}
               <div className="flex items-center justify-between gap-3 mb-4 z-10">
                 <div className="flex items-center gap-2.5 min-w-0">
@@ -430,9 +430,9 @@ function Story() {
                 <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
                 <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">The Workshop</span>
               </div>
-              <h2 className="text-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] max-w-[16ch]">
+              <h2 className="text-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] max-w-[16ch]">
                 25 years of{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   Melbourne
                 </span>{" "}
                 craftsmanship.
@@ -548,19 +548,19 @@ function Process() {
   ];
 
   return (
-    <section className="bg-charcoal text-offwhite py-20 md:py-32 grain-overlay relative overflow-hidden">
+    <section className="bg-olive text-offwhite py-20 md:py-32 grain-overlay relative overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">
         {/* Section Header */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20 md:mb-28">
           <Reveal>
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-                <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Process</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+                <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Process</span>
               </div>
               <h2 className="text-display text-5xl md:text-7xl lg:text-8xl leading-[0.88]">
                 A slow craft,{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-cream">
                   four unhurried steps
                 </span>
                 .
@@ -587,8 +587,8 @@ function Process() {
                   <div className={`relative lg:grid lg:grid-cols-2 lg:gap-12 ${i > 0 ? "lg:mt-[-2rem]" : ""}`}>
                     {/* Timeline Node */}
                     <div className="hidden lg:flex absolute left-1/2 top-12 -translate-x-1/2 z-20 items-center justify-center">
-                      <div className="h-12 w-12 border-2 border-terracotta bg-charcoal flex items-center justify-center">
-                        <span className="text-display text-sm text-terracotta">{s.n}</span>
+                      <div className="h-12 w-12 border-2 border-offwhite/40 bg-olive flex items-center justify-center">
+                        <span className="text-display text-sm text-offwhite">{s.n}</span>
                       </div>
                     </div>
 
@@ -605,7 +605,7 @@ function Process() {
                         
                         {/* Floating Step Label */}
                         <div className="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-sm border border-offwhite/15 px-3 py-1.5 flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
+                          <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
                           <span className="text-eyebrow text-offwhite/80 text-[0.62rem]">{s.accent}</span>
                         </div>
 
@@ -620,21 +620,21 @@ function Process() {
                     <div className={`${isEven ? "lg:order-2 lg:pl-16" : "lg:order-1 lg:pr-16 lg:text-right"} flex flex-col justify-center`}>
                       {/* Mobile Step Number */}
                       <div className="lg:hidden flex items-center gap-3 mb-4">
-                        <div className="h-10 w-10 border-2 border-terracotta flex items-center justify-center">
-                          <span className="text-display text-sm text-terracotta">{s.n}</span>
+                        <div className="h-10 w-10 border-2 border-offwhite/40 flex items-center justify-center">
+                          <span className="text-display text-sm text-offwhite">{s.n}</span>
                         </div>
                         <span className="h-px flex-1 bg-offwhite/15" />
                       </div>
 
-                      <h3 className="text-display text-4xl md:text-5xl lg:text-6xl mb-4 leading-[0.95]">
+                      <h3 className="text-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-[0.95]">
                         {s.title}
                       </h3>
                       <p className="text-offwhite/65 leading-relaxed text-sm md:text-base max-w-md mb-6">
                         {s.desc}
                       </p>
                       <div className={`flex items-center gap-3 ${isEven ? "" : "lg:justify-end"}`}>
-                        <span className="h-px w-10 bg-terracotta" />
-                        <span className="text-eyebrow text-terracotta text-[0.7rem]">Step {s.n}</span>
+                        <span className="h-px w-10 bg-offwhite" />
+                        <span className="text-eyebrow text-offwhite text-[0.7rem]">Step {s.n}</span>
                       </div>
                     </div>
                   </div>
@@ -652,7 +652,7 @@ function Process() {
             </p>
             <Link
               to="/contact"
-              className="magnetic-btn px-7 py-3.5 text-xs tracking-[0.18em] uppercase rounded-none inline-flex items-center gap-3"
+              className="magnetic-btn bg-offwhite text-charcoal px-7 py-3.5 text-xs tracking-[0.18em] uppercase rounded-none inline-flex items-center gap-3"
             >
               <span>Start Your Project</span>
               <span className="btn-arrow">→</span>
@@ -708,7 +708,7 @@ function Materials() {
             <Reveal delay={0.1}>
               <h2 className="text-display text-5xl md:text-7xl lg:text-8xl leading-[0.88]">
                 Partners in creating{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   dream kitchens
                 </span>
                 .
@@ -728,7 +728,7 @@ function Materials() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-7">
           {palette.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.1}>
-              <div className="group relative overflow-hidden bg-charcoal cursor-pointer">
+              <div className="group relative overflow-hidden bg-olive cursor-pointer">
                 {/* Tall Image */}
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <img
@@ -750,12 +750,12 @@ function Materials() {
                 <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-offwhite flex flex-col">
                   {/* Tag */}
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
+                    <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
                     <span className="text-eyebrow text-offwhite/60 text-[0.62rem]">{m.tag}</span>
                   </div>
 
                   {/* Material Name */}
-                  <h3 className="text-display text-3xl md:text-4xl lg:text-5xl mb-2 leading-[0.95]">
+                  <h3 className="text-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 leading-[0.95]">
                     {m.name}
                   </h3>
 
@@ -832,7 +832,7 @@ function FeaturedCard({
         <Link
           to="/portfolio/$slug"
           params={{ slug: project.slug }}
-          className="group block relative overflow-hidden bg-charcoal border border-offwhite/10 md:shadow-2xl"
+          className="group block relative overflow-hidden bg-olive border border-offwhite/10 md:shadow-2xl"
         >
           {/* Full-Width Cover Image */}
           <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -913,7 +913,7 @@ function Featured() {
               </div>
               <h2 className="text-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.88] break-words">
                 Recent{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   projects
                 </span>{" "}
                 across Melbourne.
@@ -987,7 +987,7 @@ function Testimonials() {
   }, [active]);
 
   return (
-    <section className="bg-charcoal text-offwhite py-20 md:py-32 grain-overlay relative overflow-hidden">
+    <section className="bg-olive text-offwhite py-20 md:py-32 grain-overlay relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 pointer-events-none select-none">
         <div className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-terracotta/5 blur-3xl" />
@@ -1000,12 +1000,12 @@ function Testimonials() {
           <Reveal>
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-                <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Testimonials</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+                <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Testimonials</span>
               </div>
               <h2 className="text-display text-4xl md:text-6xl lg:text-7xl leading-[0.88]">
                 What our{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-cream">
                   clients
                 </span>{" "}
                 say.
@@ -1018,14 +1018,14 @@ function Testimonials() {
             <button
               onClick={prev}
               aria-label="Previous testimonial"
-              className="h-12 w-12 border border-offwhite/20 flex items-center justify-center text-offwhite/60 hover:text-offwhite hover:border-terracotta hover:bg-terracotta/10 transition-all duration-300"
+              className="h-12 w-12 border border-offwhite/20 flex items-center justify-center text-offwhite/60 hover:text-offwhite hover:border-offwhite/40 hover:bg-terracotta/10 transition-all duration-300"
             >
               ←
             </button>
             <button
               onClick={next}
               aria-label="Next testimonial"
-              className="h-12 w-12 border border-offwhite/20 flex items-center justify-center text-offwhite/60 hover:text-offwhite hover:border-terracotta hover:bg-terracotta/10 transition-all duration-300"
+              className="h-12 w-12 border border-offwhite/20 flex items-center justify-center text-offwhite/60 hover:text-offwhite hover:border-offwhite/40 hover:bg-terracotta/10 transition-all duration-300"
             >
               →
             </button>
@@ -1044,7 +1044,7 @@ function Testimonials() {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               {/* Giant Opening Quote Mark */}
-              <div className="text-terracotta text-[8rem] md:text-[10rem] leading-[0.5] font-serif select-none mb-4 -ml-2">"</div>
+              <div className="text-offwhite text-[8rem] md:text-[10rem] leading-[0.5] font-serif select-none mb-4 -ml-2">"</div>
 
               <blockquote className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15] md:leading-[1.12] text-offwhite font-light max-w-4xl mb-10">
                 {q.quote}
@@ -1053,8 +1053,8 @@ function Testimonials() {
               {/* Attribution */}
               <div className="flex items-center gap-5">
                 {/* Initials Avatar */}
-                <div className="h-14 w-14 bg-terracotta/15 border border-terracotta/40 flex items-center justify-center flex-shrink-0">
-                  <span className="text-display text-sm text-terracotta">{q.initials}</span>
+                <div className="h-14 w-14 bg-terracotta/15 border border-offwhite/40 flex items-center justify-center flex-shrink-0">
+                  <span className="text-display text-sm text-offwhite">{q.initials}</span>
                 </div>
                 <div>
                   <div className="text-display text-base md:text-lg text-offwhite">{q.name}</div>
@@ -1079,7 +1079,7 @@ function Testimonials() {
                 </span>
                 <span
                   className={`block h-px transition-all duration-500 ${
-                    i === active ? "w-12 bg-terracotta" : "w-6 bg-offwhite/30 group-hover:w-8 group-hover:bg-offwhite/50"
+                    i === active ? "w-12 bg-offwhite" : "w-6 bg-offwhite/30 group-hover:w-8 group-hover:bg-offwhite/50"
                   }`}
                 />
               </button>
@@ -1097,16 +1097,16 @@ function Testimonials() {
           <div className="flex items-center gap-8 flex-wrap">
             {["25+ Years", "200+ Projects", "100% Referral Rate"].map((stat) => (
               <div key={stat} className="flex items-center gap-2">
-                <span className="h-1 w-1 bg-terracotta rounded-full" />
+                <span className="h-1 w-1 bg-offwhite rounded-full" />
                 <span className="text-eyebrow text-offwhite/50 text-[0.65rem]">{stat}</span>
               </div>
             ))}
           </div>
           <Link
             to="/contact"
-            className="flex items-center gap-2 text-eyebrow text-terracotta text-[0.7rem] hover:gap-3 transition-all"
+            className="flex items-center gap-2 text-eyebrow text-offwhite text-[0.7rem] hover:gap-3 transition-all"
           >
-            <span className="h-px w-6 bg-terracotta" />
+            <span className="h-px w-6 bg-offwhite" />
             Work With Us
           </Link>
         </div>
@@ -1139,8 +1139,8 @@ function FinalCTA() {
             <div className="lg:col-span-8">
               <Reveal>
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
-                  <span className="text-eyebrow text-terracotta text-[0.68rem]">
+                  <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
+                  <span className="text-eyebrow text-offwhite text-[0.68rem]">
                     Start the Conversation
                   </span>
                   <span className="h-px flex-1 max-w-[80px] bg-offwhite/15" />
@@ -1151,7 +1151,7 @@ function FinalCTA() {
                   Let's build{" "}
                   <br className="hidden md:block" />
                   something{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                  <span className="text-cream">
                     exceptional
                   </span>
                   .
@@ -1198,10 +1198,10 @@ function FinalCTA() {
             <Reveal key={item.label} delay={0.1}>
               <div className="group">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="h-1 w-1 bg-terracotta rounded-full" />
+                  <span className="h-1 w-1 bg-offwhite rounded-full" />
                   <span className="text-eyebrow text-offwhite/40 text-[0.62rem]">{item.label}</span>
                 </div>
-                <div className="text-display text-offwhite text-sm md:text-base mb-1 group-hover:text-terracotta transition-colors">
+                <div className="text-display text-offwhite text-sm md:text-base mb-1 group-hover:text-offwhite transition-colors">
                   {item.value}
                 </div>
                 <div className="text-offwhite/40 text-xs">{item.sub}</div>

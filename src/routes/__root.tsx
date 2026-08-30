@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Formline Joinery designs and builds bespoke kitchens, cabinetry and joinery for Melbourne's most considered homes. 25 years of craftsmanship, made in-house.",
       },
       { name: "author", content: "Formline Joinery" },
-      { name: "theme-color", content: "#2B2B28" },
+      { name: "theme-color", content: "#6C7454" },
       { property: "og:site_name", content: "Formline Joinery" },
       { property: "og:title", content: "Formline Joinery — Melbourne Custom Kitchens & Cabinetry" },
       {

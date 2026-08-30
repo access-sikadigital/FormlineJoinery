@@ -119,7 +119,7 @@ function Services() {
       <Header variant="overlay" />
 
       {/* DOCK-STYLED CINEMATIC DARK HERO */}
-      <section className="relative pt-40 md:pt-48 pb-20 bg-charcoal text-offwhite min-h-[90vh] flex flex-col justify-between grain-overlay overflow-hidden">
+      <section className="relative pt-40 md:pt-48 pb-20 bg-olive text-offwhite min-h-[90vh] flex flex-col justify-between grain-overlay overflow-hidden">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 pointer-events-none select-none z-0">
           <img 
@@ -128,16 +128,16 @@ function Services() {
             className="w-full h-full object-cover opacity-15 mix-blend-luminosity scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal to-charcoal" />
-          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-terracotta/[0.04] blur-[120px]" />
-          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-brass/[0.03] blur-[100px]" />
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-offwhite/[0.04] blur-[120px]" />
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-offwhite/[0.03] blur-[100px]" />
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 flex-grow flex flex-col justify-between">
           <div>
             <Reveal>
               <div className="flex items-center gap-2 mb-8">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-                <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Our Disciplines</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+                <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Our Disciplines</span>
               </div>
             </Reveal>
             
@@ -147,7 +147,7 @@ function Services() {
                   <h1 className="text-display text-5xl sm:text-6xl md:text-8xl lg:text-[9.5rem] leading-[0.88] tracking-tight text-offwhite font-black">
                     Design.<br />
                     Manufacture.<br />
-                    <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                    <span className="text-cream">
                       Install
                     </span>
                     .
@@ -181,7 +181,7 @@ function Services() {
                       }}
                       className="group flex items-center gap-3 text-left transition-colors"
                     >
-                      <span className="text-display text-sm text-terracotta font-bold group-hover:text-brass transition-colors">
+                      <span className="text-display text-sm text-offwhite font-bold group-hover:text-offwhite transition-colors">
                         {item.n}
                       </span>
                       <span className="text-eyebrow text-offwhite/70 text-xs tracking-wider group-hover:text-offwhite transition-colors">
@@ -203,7 +203,7 @@ function Services() {
             
             {/* STICKY IMAGE CONTAINER (Desktop only) */}
             <div className="hidden lg:block lg:col-span-6 lg:sticky lg:top-[18vh] lg:h-[68vh] rounded-none overflow-hidden">
-              <div className="relative w-full h-full bg-charcoal overflow-hidden shadow-xl border border-charcoal/15">
+              <div className="relative w-full h-full bg-olive overflow-hidden shadow-xl border border-charcoal/15">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeIdx}
@@ -218,8 +218,8 @@ function Services() {
                 </AnimatePresence>
                 
                 {/* Accent corner frame */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-terracotta/40 m-6" />
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-terracotta/40 m-6" />
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-offwhite/40 m-6" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-offwhite/40 m-6" />
 
                 {/* Info badge */}
                 <div className="absolute bottom-8 left-8 right-8 bg-offwhite/90 backdrop-blur-md p-6 border border-charcoal/10 shadow-lg">
@@ -245,7 +245,7 @@ function Services() {
               
               {/* Service 1 */}
               <div ref={s1Ref} className="space-y-8 scroll-mt-24">
-                <div className="lg:hidden w-full aspect-[16/10] bg-charcoal mb-8 relative overflow-hidden border border-charcoal/10">
+                <div className="lg:hidden w-full aspect-[16/10] bg-olive mb-8 relative overflow-hidden border border-charcoal/10">
                   <img src={services[0].img} alt={services[0].t} className="w-full h-full object-cover" />
                   <span className="absolute top-4 left-4 text-eyebrow text-offwhite bg-charcoal/70 px-3 py-1">{services[0].n}</span>
                 </div>
@@ -300,7 +300,7 @@ function Services() {
 
               {/* Service 2 */}
               <div ref={s2Ref} className="space-y-8 scroll-mt-24">
-                <div className="lg:hidden w-full aspect-[16/10] bg-charcoal mb-8 relative overflow-hidden border border-charcoal/10">
+                <div className="lg:hidden w-full aspect-[16/10] bg-olive mb-8 relative overflow-hidden border border-charcoal/10">
                   <img src={services[1].img} alt={services[1].t} className="w-full h-full object-cover" />
                   <span className="absolute top-4 left-4 text-eyebrow text-offwhite bg-charcoal/70 px-3 py-1">{services[1].n}</span>
                 </div>
@@ -355,7 +355,7 @@ function Services() {
 
               {/* Service 3 */}
               <div ref={s3Ref} className="space-y-8 scroll-mt-24">
-                <div className="lg:hidden w-full aspect-[16/10] bg-charcoal mb-8 relative overflow-hidden border border-charcoal/10">
+                <div className="lg:hidden w-full aspect-[16/10] bg-olive mb-8 relative overflow-hidden border border-charcoal/10">
                   <img src={services[2].img} alt={services[2].t} className="w-full h-full object-cover" />
                   <span className="absolute top-4 left-4 text-eyebrow text-offwhite bg-charcoal/70 px-3 py-1">{services[2].n}</span>
                 </div>
@@ -410,7 +410,7 @@ function Services() {
 
               {/* Service 4 */}
               <div ref={s4Ref} className="space-y-8 scroll-mt-24">
-                <div className="lg:hidden w-full aspect-[16/10] bg-charcoal mb-8 relative overflow-hidden border border-charcoal/10">
+                <div className="lg:hidden w-full aspect-[16/10] bg-olive mb-8 relative overflow-hidden border border-charcoal/10">
                   <img src={services[3].img} alt={services[3].t} className="w-full h-full object-cover" />
                   <span className="absolute top-4 left-4 text-eyebrow text-offwhite bg-charcoal/70 px-3 py-1">{services[3].n}</span>
                 </div>
@@ -517,7 +517,7 @@ function Services() {
       </section>
 
       {/* NEXT-LEVEL SPLIT-SCREEN STATEMENT CTA */}
-      <section className="bg-charcoal text-offwhite border-t border-offwhite/10 grain-overlay relative overflow-hidden">
+      <section className="bg-olive text-offwhite border-t border-offwhite/10 grain-overlay relative overflow-hidden">
         <div className="grid lg:grid-cols-12 items-stretch min-h-[65vh]">
           {/* Left Column — Immersive Workshop Visual */}
           <div className="lg:col-span-5 relative hidden lg:block overflow-hidden bg-charcoal/90">
@@ -529,7 +529,7 @@ function Services() {
             {/* Ambient gradients */}
             <div className="absolute inset-0 bg-gradient-to-r from-terracotta/20 to-transparent mix-blend-overlay" />
             <div className="absolute bottom-12 left-12 right-12 z-10 space-y-4">
-              <span className="text-[0.62rem] text-terracotta tracking-widest font-bold uppercase block">
+              <span className="text-[0.62rem] text-offwhite tracking-widest font-bold uppercase block">
                 Local Production
               </span>
               <h4 className="text-display text-2xl text-offwhite leading-tight max-w-sm">
@@ -548,18 +548,18 @@ function Services() {
           {/* Right Column — Call-to-Action Panel */}
           <div className="lg:col-span-7 flex flex-col justify-center p-8 md:p-12 lg:p-20 relative">
             <div className="absolute inset-0 pointer-events-none select-none">
-              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-terracotta/[0.03] blur-[100px]" />
+              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-offwhite/[0.03] blur-[100px]" />
             </div>
 
             <div className="relative z-10 space-y-8 max-w-2xl">
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-                <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Start Your Journey</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+                <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Start Your Journey</span>
               </div>
 
               <h2 className="text-display text-4xl sm:text-5xl md:text-7xl leading-[0.9] tracking-tight text-offwhite">
                 Ready to construct your <br />
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-cream">
                   ideal space
                 </span>
                 ?
@@ -572,7 +572,7 @@ function Services() {
               <div className="flex flex-wrap gap-5 pt-4">
                 <Link 
                   to="/contact" 
-                  className="bg-[#6C7454] hover:bg-[#5b6346] text-offwhite px-8 py-4.5 transition-all duration-300 font-semibold text-sm flex items-center justify-center gap-2 rounded-none hover:gap-3"
+                  className="bg-olive hover:bg-olive/85 text-offwhite px-8 py-4.5 transition-all duration-300 font-semibold text-sm flex items-center justify-center gap-2 rounded-none hover:gap-3"
                 >
                   <span>Book Consultation</span>
                   <span className="text-xs">→</span>

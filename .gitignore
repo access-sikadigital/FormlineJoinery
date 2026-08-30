@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# FUSE orphans — created when a file is replaced while another process
+# still holds it open. Always stale copies; safe to delete.
+.fuse_hidden*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

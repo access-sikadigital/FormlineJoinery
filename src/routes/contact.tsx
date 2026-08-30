@@ -37,26 +37,26 @@ function Contact() {
         <div className="grid lg:grid-cols-12 min-h-screen">
           
           {/* Left Column — The Workshop (Dark Cinematic Panel) */}
-          <div className="lg:col-span-5 bg-charcoal text-offwhite flex flex-col justify-between p-8 md:p-12 lg:p-20 relative overflow-hidden grain-overlay">
+          <div className="lg:col-span-5 bg-olive text-offwhite flex flex-col justify-between p-8 md:p-12 lg:p-20 relative overflow-hidden grain-overlay">
             {/* Ambient Background Glow */}
             <div className="absolute inset-0 pointer-events-none select-none">
-              <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-terracotta/[0.03] blur-[100px]" />
+              <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-offwhite/[0.03] blur-[100px]" />
             </div>
 
             <div className="relative z-10 pt-16">
               <Reveal>
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
-                  <span className="text-eyebrow text-terracotta text-[0.68rem] tracking-widest uppercase">The Workshop</span>
+                  <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
+                  <span className="text-eyebrow text-offwhite text-[0.68rem] tracking-widest uppercase">The Workshop</span>
                   <span className="h-px w-16 bg-offwhite/15" />
                 </div>
               </Reveal>
 
               <Reveal delay={0.1}>
-                <h1 className="text-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight mb-8">
+                <h1 className="text-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight mb-8">
                   Drop by <br />
                   our space in <br />
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">Campbellfield</span>.
+                  <span className="text-cream">Campbellfield</span>.
                 </h1>
               </Reveal>
 
@@ -81,11 +81,11 @@ function Contact() {
                   <div>
                     <div className="text-eyebrow text-offwhite/30 text-[0.58rem] mb-2 uppercase">Direct Lines</div>
                     <p className="text-sm font-medium leading-relaxed">
-                      <a href="mailto:admin@formlinejoinery.com.au" className="hover:text-terracotta transition-colors">
+                      <a href="mailto:admin@formlinejoinery.com.au" className="hover:text-offwhite transition-colors break-all">
                         admin@formlinejoinery.com.au
                       </a>
                       <br />
-                      <a href="tel:0401869565" className="hover:text-terracotta transition-colors">
+                      <a href="tel:0401869565" className="hover:text-offwhite transition-colors">
                         0401 869 565
                       </a>
                     </p>
@@ -108,7 +108,7 @@ function Contact() {
                         <a
                           key={s}
                           href="#"
-                          className="h-8 w-8 rounded-full border border-offwhite/15 flex items-center justify-center text-xs hover:text-terracotta hover:border-terracotta transition-all"
+                          className="h-8 w-8 rounded-full border border-offwhite/15 flex items-center justify-center text-xs hover:text-offwhite hover:border-offwhite/40 transition-all"
                         >
                           {s}
                         </a>
@@ -150,7 +150,7 @@ function Contact() {
                 <h2 className="text-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight mb-6">
                   Let's discuss <br />
                   your{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">project</span>.
+                  <span className="text-brass">project</span>.
                 </h2>
                 <p className="text-charcoal/70 text-base md:text-lg leading-relaxed max-w-lg mb-12">
                   Whether you have architectural plans ready to quote or you’re starting from scratch, we’d love to hear about your project. Fill in the form below and one of our team will get back to you within 24 hours.

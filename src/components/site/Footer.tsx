@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
-    <footer className="relative bg-charcoal text-offwhite grain-overlay overflow-hidden">
+    <footer className="relative bg-olive text-offwhite grain-overlay overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10 pt-24 md:pt-32 pb-10">
         <div className="mb-16 border-b border-offwhite/10 pb-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <Link to="/" aria-label="Formline Joinery">
@@ -19,13 +19,13 @@ export function Footer() {
             <h3 className="text-display text-3xl md:text-5xl mb-8 max-w-md break-words hyphens-auto">
               Field notes from the workshop.
             </h3>
-            <form className="flex w-full border-b border-offwhite/30 pb-3 max-w-md focus-within:border-terracotta transition">
+            <form className="flex w-full border-b border-offwhite/30 pb-3 max-w-md focus-within:border-offwhite/40 transition">
               <input
                 type="email"
                 placeholder="your@email.com"
                 className="flex-1 min-w-0 bg-transparent outline-none placeholder:text-offwhite/40 text-sm md:text-base"
               />
-              <button className="text-eyebrow text-[0.6rem] md:text-[0.68rem] text-offwhite/80 hover:text-terracotta transition shrink-0 ml-4">
+              <button className="text-eyebrow text-[0.6rem] md:text-[0.68rem] text-offwhite/80 hover:text-offwhite transition shrink-0 ml-4">
                 Subscribe →
               </button>
             </form>
@@ -43,7 +43,7 @@ export function Footer() {
           <div>
             <div className="text-eyebrow text-offwhite/50 mb-6">Contact</div>
             <ul className="space-y-2 text-offwhite/80">
-              <li>admin@formlinejoinery.com.au</li>
+              <li className="break-all">admin@formlinejoinery.com.au</li>
               <li>0401 869 565</li>
               <li className="pt-4">Mon–Fri 8:00 – 17:00</li>
             </ul>
@@ -64,7 +64,7 @@ export function Footer() {
                 ["/contact", "Contact"],
               ].map(([to, label]) => (
                 <li key={to}>
-                  <Link to={to} className="text-offwhite/80 hover:text-terracotta transition">
+                  <Link to={to} className="text-offwhite/80 hover:text-offwhite transition">
                     {label}
                   </Link>
                 </li>
@@ -77,9 +77,9 @@ export function Footer() {
           <div className="text-eyebrow text-offwhite/40">
             © {new Date().getFullYear()} Formline Joinery. Crafted in Melbourne.
           </div>
-          <div className="flex gap-6 text-eyebrow text-offwhite/60">
-            <a href="https://www.instagram.com/axiom_themes/" className="hover:text-terracotta transition">Instagram</a>
-            <a href="https://www.facebook.com/AxiomThemes" className="hover:text-terracotta transition">Facebook</a>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-eyebrow text-offwhite/60">
+            <a href="https://www.instagram.com/axiom_themes/" className="hover:text-offwhite transition">Instagram</a>
+            <a href="https://www.facebook.com/AxiomThemes" className="hover:text-offwhite transition">Facebook</a>
           </div>
         </div>
 

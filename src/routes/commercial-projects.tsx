@@ -24,7 +24,7 @@ function CommercialProjects() {
       <Header variant="solid" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-charcoal text-offwhite overflow-hidden grain-overlay">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-olive text-offwhite overflow-hidden grain-overlay">
         <div className="absolute inset-0 z-0 opacity-40">
           <img src={workshop} alt="Commercial Joinery Hero" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-charcoal/80" />
@@ -33,8 +33,8 @@ function CommercialProjects() {
         <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">
           <Reveal>
             <div className="flex items-center gap-2 mb-8">
-              <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-              <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest uppercase">Our Services</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+              <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest uppercase">Our Services</span>
             </div>
           </Reveal>
           
@@ -43,7 +43,7 @@ function CommercialProjects() {
               <Reveal delay={0.1}>
                 <h1 className="text-display text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-tight mb-8">
                   Commercial joinery, delivered at{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">scale</span>.
+                  <span className="text-cream">scale</span>.
                 </h1>
               </Reveal>
             </div>
@@ -55,7 +55,7 @@ function CommercialProjects() {
                 <p className="text-offwhite/70 text-sm md:text-base leading-relaxed mb-8 max-w-sm">
                   Precision joinery, delivered to spec — at any scale.
                 </p>
-                <Link to="/contact" className="magnetic-btn px-8 py-4 inline-flex items-center gap-3">
+                <Link to="/contact" className="magnetic-btn bg-offwhite text-charcoal px-8 py-4 inline-flex items-center gap-3">
                   <span>Request a Quote</span>
                   <span className="btn-arrow">→</span>
                 </Link>
@@ -66,7 +66,7 @@ function CommercialProjects() {
       </section>
 
       {/* Feature Badges */}
-      <section className="bg-charcoal border-t border-white/10 text-offwhite py-8">
+      <section className="bg-olive border-t border-white/10 text-offwhite py-8">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -76,9 +76,9 @@ function CommercialProjects() {
               "Scalable capacity"
             ].map((badge, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="flex items-center justify-center text-center gap-3 border border-white/10 py-6 px-4 hover:bg-white/5 transition-colors">
-                  <span className="text-terracotta">✦</span>
-                  <span className="text-xs uppercase tracking-widest font-bold">{badge}</span>
+                <div className="flex flex-col sm:flex-row items-center justify-center text-center gap-2 sm:gap-3 border border-white/10 py-6 px-2 sm:px-4 hover:bg-white/5 transition-colors">
+                  <span className="text-offwhite">✦</span>
+                  <span className="text-xs uppercase tracking-wider sm:tracking-widest font-bold">{badge}</span>
                 </div>
               </Reveal>
             ))}
@@ -96,7 +96,7 @@ function CommercialProjects() {
               <Reveal delay={0.1}>
                 <h2 className="text-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-8">
                   A joinery partner builders and developers rely{" "}
-                  <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">on</span>.
+                  <span className="text-brass">on</span>.
                 </h2>
               </Reveal>
               
@@ -109,7 +109,7 @@ function CommercialProjects() {
 
             {/* Image Block */}
             <Reveal>
-              <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-charcoal relative overflow-hidden border border-charcoal/10 group">
+              <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-olive relative overflow-hidden border border-charcoal/10 group">
                 <img src={projectWalnut} alt="Commercial Joinery Detail" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out" />
               </div>
             </Reveal>
@@ -146,11 +146,11 @@ function CommercialProjects() {
       </section>
 
       {/* Craftsmanship Section */}
-      <section className="py-24 md:py-36 bg-charcoal text-offwhite grain-overlay">
+      <section className="py-24 md:py-36 bg-olive text-offwhite grain-overlay">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10 text-center">
           <Reveal>
             <h2 className="text-display text-4xl md:text-6xl leading-tight mb-8">
-              Capacity without <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">compromise</span>
+              Capacity without <span className="text-cream">compromise</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>

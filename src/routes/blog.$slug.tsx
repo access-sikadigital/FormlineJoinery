@@ -127,7 +127,7 @@ function Post() {
             <Reveal delay={0.12}>
               <div className="flex flex-wrap items-center justify-between gap-6 pt-12 mt-12 border-t border-charcoal/10">
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-charcoal text-offwhite flex items-center justify-center text-display text-lg font-bold">
+                  <div className="h-12 w-12 rounded-full bg-olive text-offwhite flex items-center justify-center text-display text-lg font-bold">
                     {p.author.charAt(0)}
                   </div>
                   <div>
@@ -143,7 +143,7 @@ function Post() {
           </div>
 
           {/* Hero Right Column — Clean Parallax Frame */}
-          <div className="lg:col-span-5 relative min-h-[40vh] lg:min-h-0 overflow-hidden bg-charcoal">
+          <div className="lg:col-span-5 relative min-h-[40vh] lg:min-h-0 overflow-hidden bg-olive">
             <img 
               src={p.cover} 
               alt={p.title} 
@@ -286,7 +286,7 @@ function Post() {
               <Reveal delay={0.2}>
                 <div className="mt-16 bg-cream border border-charcoal/15 p-8 md:p-12 flex flex-col md:flex-row gap-6 md:gap-10 items-start relative overflow-hidden">
                   <div className="absolute top-0 right-0 h-1.5 w-16 bg-terracotta" />
-                  <div className="h-16 w-16 rounded-full bg-charcoal text-offwhite flex-shrink-0 flex items-center justify-center text-display text-2xl font-bold">
+                  <div className="h-16 w-16 rounded-full bg-olive text-offwhite flex-shrink-0 flex items-center justify-center text-display text-2xl font-bold">
                     {p.author.charAt(0)}
                   </div>
                   <div className="space-y-3">
@@ -447,7 +447,7 @@ function Post() {
                     <div>
                       <button
                         type="submit"
-                        className="bg-[#6C7454] hover:bg-[#5b6346] text-offwhite px-8 py-4 flex items-center justify-center gap-2 transition-colors min-w-[160px] font-medium text-sm"
+                        className="bg-olive hover:bg-olive/85 text-offwhite px-8 py-4 flex items-center justify-center gap-2 transition-colors min-w-[160px] font-medium text-sm"
                       >
                         <span>Post Comment</span>
                         <span>→</span>

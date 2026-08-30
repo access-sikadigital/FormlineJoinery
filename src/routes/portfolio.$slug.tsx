@@ -135,7 +135,7 @@ function ProjectDetail() {
       <Header variant="overlay" />
 
       {/* 100VH CINEMATIC PARALLAX HERO */}
-      <section className="relative h-[95vh] w-full bg-charcoal overflow-hidden flex flex-col justify-end py-16 md:py-24">
+      <section className="relative h-[95vh] w-full bg-olive overflow-hidden flex flex-col justify-end py-16 md:py-24">
         {/* Full Screen Background Image */}
         <div className="absolute inset-0 z-0">
           <motion.img 
@@ -153,11 +153,11 @@ function ProjectDetail() {
         <div className="relative z-20 mx-auto w-full max-w-[1600px] px-6 md:px-10 space-y-6">
           <Reveal>
             <div className="inline-flex items-center gap-3">
-              <Link to="/portfolio" className="text-eyebrow text-offwhite/50 hover:text-terracotta transition-colors font-bold text-[0.62rem] tracking-widest uppercase">
+              <Link to="/portfolio" className="text-eyebrow text-offwhite/50 hover:text-offwhite transition-colors font-bold text-[0.62rem] tracking-widest uppercase">
                 ← Archive list
               </Link>
               <span className="text-offwhite/20">/</span>
-              <span className="text-eyebrow text-terracotta font-bold text-[0.62rem] tracking-widest uppercase">
+              <span className="text-eyebrow text-offwhite font-bold text-[0.62rem] tracking-widest uppercase">
                 {p.category}
               </span>
             </div>
@@ -186,7 +186,7 @@ function ProjectDetail() {
                   <span className="text-display text-sm text-offwhite font-bold">{p.category}</span>
                 </div>
               </div>
-              <div className="hidden md:block h-3 w-3 rounded-full bg-terracotta animate-pulse" />
+              <div className="hidden md:block h-3 w-3 rounded-full bg-offwhite animate-pulse" />
             </div>
           </Reveal>
         </div>
@@ -286,7 +286,7 @@ function ProjectDetail() {
                     {/* Expand icon overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-charcoal/10 backdrop-blur-[2px]">
                       <div className="h-14 w-14 rounded-full bg-offwhite/90 border border-charcoal/10 flex items-center justify-center text-charcoal">
-                        <span className="text-xs uppercase tracking-widest font-bold">Zoom</span>
+                        <span className="text-xs uppercase tracking-wider sm:tracking-widest font-bold">Zoom</span>
                       </div>
                     </div>
                   </div>
@@ -419,7 +419,7 @@ function ProjectDetail() {
 
       {/* NEXT PROJECT BANNER — Massive Zoom Marquee */}
       {nextProject && (
-        <section className="relative h-[65vh] w-full overflow-hidden bg-charcoal">
+        <section className="relative h-[65vh] w-full overflow-hidden bg-olive">
           <Link 
             to="/portfolio/$slug" 
             params={{ slug: nextProject.slug }}
@@ -435,10 +435,10 @@ function ProjectDetail() {
             
             {/* Centered content block */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 space-y-4">
-              <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest uppercase block">
+              <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest uppercase block">
                 Up Next
               </span>
-              <h2 className="text-display text-4xl sm:text-6xl md:text-8xl text-offwhite tracking-tight leading-none uppercase max-w-4xl group-hover:text-terracotta transition-colors duration-500 font-black">
+              <h2 className="text-display text-4xl sm:text-6xl md:text-8xl text-offwhite tracking-tight leading-none uppercase max-w-4xl group-hover:text-offwhite transition-colors duration-500 font-black">
                 {nextProject.title}
               </h2>
               <span className="text-eyebrow text-offwhite/50 text-[0.62rem] tracking-widest uppercase font-bold block pt-2 border-t border-offwhite/10 mt-4">

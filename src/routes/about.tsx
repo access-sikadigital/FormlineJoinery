@@ -66,7 +66,7 @@ function AboutHero() {
                 Built on craft.{" "}
                 <br className="hidden md:block" />
                 Grown by{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   referral
                 </span>
                 .
@@ -186,7 +186,7 @@ function WhyChooseUs() {
             <Reveal delay={0.1}>
               <h2 className="text-display text-5xl md:text-7xl lg:text-8xl leading-[0.88] tracking-tight">
                 Why homeowners{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   choose us
                 </span>
                 .
@@ -206,7 +206,7 @@ function WhyChooseUs() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Sticky Left Column: Interactive Image Frame */}
           <div className="hidden lg:block lg:col-span-5 sticky top-32">
-            <div className="relative aspect-[4/5] overflow-hidden border border-charcoal/10 shadow-2xl bg-charcoal">
+            <div className="relative aspect-[4/5] overflow-hidden border border-charcoal/10 shadow-2xl bg-olive">
               {features.map((f, i) => (
                 <div
                   key={f.title}
@@ -318,19 +318,19 @@ function WhyChooseUs() {
    ============================================================ */
 function OurApproach() {
   return (
-    <section className="bg-charcoal text-offwhite py-24 md:py-36 grain-overlay relative overflow-hidden">
+    <section className="bg-olive text-offwhite py-24 md:py-36 grain-overlay relative overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">
         {/* Section Header */}
         <Reveal>
           <div className="flex items-center gap-2 mb-6">
-            <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-            <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Our Approach</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+            <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Our Approach</span>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="text-display text-4xl md:text-6xl lg:text-7xl leading-[0.88] mb-16 md:mb-24 max-w-3xl">
             How we{" "}
-            <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+            <span className="text-cream">
               work
             </span>
             .
@@ -353,7 +353,7 @@ function OurApproach() {
               </div>
               {/* Floating Label */}
               <div className="absolute bottom-6 left-6 bg-charcoal/80 backdrop-blur-sm border border-offwhite/15 px-4 py-2 flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
+                <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
                 <span className="text-eyebrow text-offwhite/80 text-[0.62rem]">Campbellfield Workshop</span>
               </div>
             </div>
@@ -381,7 +381,7 @@ function OurApproach() {
                   { n: "100%", l: "In-House" },
                 ].map((s) => (
                   <div key={s.l}>
-                    <div className="text-display text-2xl md:text-3xl text-terracotta mb-1">{s.n}</div>
+                    <div className="text-display text-2xl md:text-3xl text-offwhite mb-1">{s.n}</div>
                     <div className="text-eyebrow text-offwhite/50 text-[0.62rem]">{s.l}</div>
                   </div>
                 ))}
@@ -400,7 +400,7 @@ function OurApproach() {
                   />
                 </div>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="h-px w-6 bg-terracotta" />
+                  <span className="h-px w-6 bg-offwhite" />
                   <span className="text-eyebrow text-offwhite/50 text-[0.62rem]">Creating friendly and safe kitchen spaces</span>
                 </div>
               </div>
@@ -427,11 +427,11 @@ function FAQItem({ question, answer, isOpen, toggle }: {
         onClick={toggle}
         className="w-full py-6 md:py-8 flex items-center justify-between gap-6 text-left group"
       >
-        <h3 className="text-display text-lg md:text-xl lg:text-2xl group-hover:text-terracotta transition-colors">
+        <h3 className="text-display text-lg md:text-xl lg:text-2xl group-hover:text-offwhite transition-colors">
           {question}
         </h3>
         <div className={`flex-shrink-0 h-10 w-10 border border-charcoal/20 flex items-center justify-center transition-all duration-300 ${
-          isOpen ? "bg-terracotta border-terracotta rotate-45" : "group-hover:border-terracotta"
+          isOpen ? "bg-offwhite border-offwhite/40 rotate-45" : "group-hover:border-offwhite/40"
         }`}>
           <span className={`text-lg transition-colors ${isOpen ? "text-offwhite" : "text-charcoal/60"}`}>+</span>
         </div>
@@ -480,7 +480,7 @@ function FAQSection() {
             <Reveal delay={0.1}>
               <h2 className="text-display text-4xl md:text-5xl lg:text-6xl leading-[0.88] mb-6">
                 Questions about working with{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-brass">
                   Formline
                 </span>
                 .
@@ -537,10 +537,10 @@ function Suppliers() {
   ];
 
   return (
-    <section className="bg-charcoal text-offwhite py-24 md:py-36 grain-overlay relative overflow-hidden">
+    <section className="bg-olive text-offwhite py-24 md:py-36 grain-overlay relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-terracotta/[0.04] blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-offwhite/[0.04] blur-[120px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">
@@ -549,14 +549,14 @@ function Suppliers() {
           <div className="lg:col-span-7">
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
-                <span className="text-eyebrow text-terracotta font-bold text-xs tracking-widest">Our Suppliers</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-offwhite" />
+                <span className="text-eyebrow text-offwhite font-bold text-xs tracking-widest">Our Suppliers</span>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-display text-4xl md:text-6xl lg:text-7xl leading-[0.88]">
                 Partners in creating{" "}
-                <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+                <span className="text-cream">
                   dream kitchens
                 </span>
                 .
@@ -576,7 +576,7 @@ function Suppliers() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-offwhite/10 border border-offwhite/10">
           {suppliers.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.04}>
-              <div className="group bg-charcoal p-4 md:p-8 lg:p-10 flex flex-col justify-between h-full cursor-default hover:bg-offwhite/[0.04] transition-all duration-500 relative overflow-hidden">
+              <div className="group bg-olive p-4 md:p-8 lg:p-10 flex flex-col justify-between h-full cursor-default hover:bg-offwhite/[0.04] transition-all duration-500 relative overflow-hidden">
                 {/* Large Ghost Letter */}
                 <div className="absolute -top-4 -right-2 text-display text-[7rem] md:text-[9rem] leading-none text-offwhite/[0.03] select-none pointer-events-none group-hover:text-offwhite/[0.06] transition-colors duration-700">
                   {s.name.charAt(0)}
@@ -586,7 +586,7 @@ function Suppliers() {
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6 md:mb-10">
                     <div className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-terracotta rounded-full group-hover:scale-150 transition-transform" />
+                      <span className="h-1.5 w-1.5 bg-offwhite rounded-full group-hover:scale-150 transition-transform" />
                       <span className="text-eyebrow text-offwhite/40 text-[0.58rem]">{s.accent}</span>
                     </div>
                     <span className="text-eyebrow text-offwhite/20 text-[0.58rem]">
@@ -597,7 +597,7 @@ function Suppliers() {
 
                 {/* Bottom: Name + Desc */}
                 <div className="relative z-10">
-                  <h3 className="text-display text-lg sm:text-2xl md:text-3xl mb-3 group-hover:text-terracotta transition-colors duration-300 leading-tight break-words hyphens-auto">
+                  <h3 className="text-display text-xs sm:text-2xl md:text-3xl mb-3 group-hover:text-offwhite transition-colors duration-300 leading-tight break-words hyphens-auto">
                     {s.name}
                   </h3>
                   <p className="text-offwhite/40 text-xs leading-relaxed group-hover:text-offwhite/60 transition-colors max-w-[200px]">
@@ -615,16 +615,16 @@ function Suppliers() {
             <div className="flex items-center gap-8 flex-wrap">
               {["Australian Made", "Industry Certified", "Premium Grade Only"].map((badge) => (
                 <div key={badge} className="flex items-center gap-2">
-                  <span className="h-1 w-1 bg-terracotta rounded-full" />
+                  <span className="h-1 w-1 bg-offwhite rounded-full" />
                   <span className="text-eyebrow text-offwhite/40 text-[0.62rem]">{badge}</span>
                 </div>
               ))}
             </div>
             <Link
               to="/contact"
-              className="flex items-center gap-2 text-eyebrow text-terracotta text-[0.68rem] hover:gap-3 transition-all"
+              className="flex items-center gap-2 text-eyebrow text-offwhite text-[0.68rem] hover:gap-3 transition-all"
             >
-              <span className="h-px w-6 bg-terracotta" />
+              <span className="h-px w-6 bg-offwhite" />
               Discuss Materials
             </Link>
           </div>
@@ -649,14 +649,14 @@ function AboutCTA() {
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10 py-28 md:py-40 text-center">
         <Reveal>
           <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="h-1.5 w-1.5 bg-terracotta rounded-full" />
-            <span className="text-eyebrow text-terracotta text-[0.68rem]">Start the Conversation</span>
+            <span className="h-1.5 w-1.5 bg-offwhite rounded-full" />
+            <span className="text-eyebrow text-offwhite text-[0.68rem]">Start the Conversation</span>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="text-display text-offwhite text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.88] max-w-4xl mx-auto mb-6">
             Ready to start your{" "}
-            <span className="text-serif-italic normal-case font-normal text-brass tracking-normal">
+            <span className="text-cream">
               project
             </span>
             ?
