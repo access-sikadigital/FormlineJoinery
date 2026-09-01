@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Formline Joinery — Melbourne Custom Kitchens & Cabinetry" },
+      { title: "Formline Joinery | Melbourne Custom Kitchens & Joinery" },
       {
         name: "description",
         content:
@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Formline Joinery" },
       { name: "theme-color", content: "#6C7454" },
       { property: "og:site_name", content: "Formline Joinery" },
-      { property: "og:title", content: "Formline Joinery — Melbourne Custom Kitchens & Cabinetry" },
+      { property: "og:title", content: "Formline Joinery | Melbourne Custom Kitchens & Joinery" },
       {
         property: "og:description",
         content:
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Formline Joinery — Melbourne Custom Kitchens & Cabinetry" },
+      { name: "twitter:title", content: "Formline Joinery | Melbourne Custom Kitchens & Joinery" },
       { name: "description", content: "Bespoke custom kitchens, cabinetry, commercial joinery and shop fitouts. 25 years of craftsmanship, made in Melbourne." },
       { property: "og:description", content: "Bespoke custom kitchens, cabinetry, commercial joinery and shop fitouts. 25 years of craftsmanship, made in Melbourne." },
       { name: "twitter:description", content: "Bespoke custom kitchens, cabinetry, commercial joinery and shop fitouts. 25 years of craftsmanship, made in Melbourne." },

@@ -19,13 +19,13 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Formline Joinery — Melbourne Custom Kitchens & Cabinetry" },
+      { title: "Formline Joinery | Melbourne Custom Kitchens & Joinery" },
       {
         name: "description",
         content:
           "Bespoke custom kitchens, cabinetry, commercial joinery and shop fitouts. 25 years of craftsmanship, made in Melbourne.",
       },
-      { property: "og:title", content: "Formline Joinery — Melbourne Custom Joinery" },
+      { property: "og:title", content: "Formline Joinery | Melbourne Custom Kitchens & Joinery" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
