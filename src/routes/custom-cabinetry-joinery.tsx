@@ -25,9 +25,9 @@ function CustomCabinetry() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-olive text-offwhite overflow-hidden grain-overlay">
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0">
           <img src={heroKitchen} alt="Cabinetry Hero" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-charcoal/80" />
+          <div className="absolute inset-0 bg-charcoal/70" />
         </div>
         
         <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10">

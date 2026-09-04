@@ -8,10 +8,10 @@ const NAV = [
   { 
     label: "Our Services", 
     children: [
-      { to: "/custom-kitchens", label: "Custom Kitchens" },
-      { to: "/custom-cabinetry-joinery", label: "Custom Cabinetry & Joinery" },
-      { to: "/shop-fitouts", label: "Shop Fitouts" },
-      { to: "/commercial-projects", label: "Commercial Projects" },
+      { to: "/custom-kitchens", label: "Custom Kitchens", desc: "Bespoke kitchens designed around how you live" },
+      { to: "/custom-cabinetry-joinery", label: "Custom Cabinetry & Joinery", desc: "Wardrobes, vanities and everyday storage" },
+      { to: "/shop-fitouts", label: "Shop Fitouts", desc: "Retail and hospitality fitouts, end to end" },
+      { to: "/commercial-projects", label: "Commercial Projects", desc: "Large-scale joinery for builders and developers" },
     ] 
   },
   { to: "/portfolio", label: "Portfolio" },
@@ -71,25 +71,79 @@ export function Header({ variant = "overlay" }: { variant?: "overlay" | "solid" 
             {NAV.slice(0, -1).map((item) => {
               if (item.children) {
                 return (
-                  <div key={item.label} className="relative group">
+                  <div key={item.label} className="relative group py-4 -my-4">
                     <span
-                      className={`text-eyebrow cursor-pointer transition-colors !text-[16px] !tracking-wider font-semibold ${
-                        isOverlay ? "text-offwhite/85 hover:text-offwhite" : "text-charcoal/70 hover:text-charcoal"
+                      className={`text-eyebrow relative inline-flex items-center gap-2 cursor-pointer transition-colors !text-[16px] !tracking-wider font-semibold ${
+                        isOverlay ? "text-offwhite/85 group-hover:text-offwhite" : "text-charcoal/70 group-hover:text-charcoal"
                       }`}
                     >
                       {item.label}
+                      <svg
+                        className="h-2 w-2.5 shrink-0 transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:rotate-180"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M1 1l4 4 4-4" />
+                      </svg>
+                      <span
+                        className={`pointer-events-none absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-x-100 ${
+                          isOverlay ? "bg-offwhite/70" : "bg-terracotta"
+                        }`}
+                      />
                     </span>
-                    <div className="absolute top-full left-0 pt-6 hidden group-hover:block w-64 opacity-0 group-hover:opacity-100 group-hover:animate-fade-up">
-                      <div className="bg-olive text-offwhite border border-offwhite/10 p-5 flex flex-col gap-4 shadow-xl">
-                        {item.children.map((child) => (
+
+                    {/* Mega panel. The wrapper (and its pt-3 bridge) always sits in
+                        place, so the pointer never crosses a dead gap on the way down;
+                        only the panel inside it fades and lifts. */}
+                    <div className="absolute top-full left-0 pt-3 w-[440px] max-w-[calc(100vw-3rem)] invisible pointer-events-none transition-[visibility] duration-500 group-hover:visible group-hover:pointer-events-auto">
+                      <div className="relative overflow-hidden bg-olive text-offwhite border border-offwhite/12 shadow-[var(--shadow-soft)] opacity-0 translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:opacity-100 group-hover:translate-y-0">
+                        <div className="grain-overlay pointer-events-none absolute inset-0" />
+                        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-terracotta via-brass to-transparent" />
+
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-3 border-b border-offwhite/15 bg-charcoal/30 px-6 py-3">
+                            <span className="h-2 w-2 shrink-0 rounded-full bg-terracotta" />
+                            <span className="text-eyebrow text-[0.72rem] font-semibold text-offwhite">What we make</span>
+                            <span className="h-px flex-1 bg-offwhite/25" />
+                          </div>
+
+                          {item.children.map((child, ci) => (
+                            <Link
+                              key={child.to}
+                              to={child.to}
+                              className={`group/item relative flex items-start gap-3.5 px-6 py-3 transition-colors duration-300 hover:bg-offwhite/[0.06] ${ci > 0 ? "border-t border-offwhite/12" : ""}`}
+                              activeProps={{ className: "bg-offwhite/[0.06]" }}
+                            >
+                              <span className="pointer-events-none absolute left-0 top-0 h-full w-px origin-top scale-y-0 bg-terracotta transition-transform duration-300 ease-out group-hover/item:scale-y-100" />
+                              <span className="text-eyebrow mt-0.5 text-[0.75rem] text-offwhite/60 transition-colors duration-300 group-hover/item:text-offwhite">
+                                {String(ci + 1).padStart(2, "0")}
+                              </span>
+                              <span className="min-w-0 flex-1">
+                                <span className="block text-[1.05rem] font-semibold leading-snug text-offwhite transition-transform duration-300 ease-out group-hover/item:translate-x-1">
+                                  {child.label}
+                                </span>
+                                <span className="mt-0.5 block text-[0.8rem] leading-snug text-offwhite/75">
+                                  {child.desc}
+                                </span>
+                              </span>
+                              <span className="mt-0.5 shrink-0 opacity-0 transition-all duration-300 ease-out group-hover/item:translate-x-1 group-hover/item:opacity-100">
+                                →
+                              </span>
+                            </Link>
+                          ))}
+
                           <Link
-                            key={child.to}
-                            to={child.to}
-                            className="text-sm font-medium hover:text-offwhite transition-colors"
+                            to="/services"
+                            className="group/all flex items-center justify-between gap-4 border-t border-offwhite/15 bg-charcoal/25 px-6 py-3 transition-colors duration-300 hover:bg-charcoal/45"
                           >
-                            {child.label}
+                            <span className="text-eyebrow text-[0.7rem] text-offwhite">View all services</span>
+                            <span className="text-offwhite transition-transform duration-300 ease-out group-hover/all:translate-x-1">→</span>
                           </Link>
-                        ))}
+                        </div>
                       </div>
                     </div>
                   </div>
